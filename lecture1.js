@@ -48,7 +48,7 @@ let arrayLength = arrayOne.length ;
 //     console.log(`element of array at index `,x,arrayOne[x]) ;
 // }
 
-while(arrayLength<0){                                                 // arraylength = -1
+while(arrayLength>0){                                                 // arraylength = -1
     console.log(`element of array at index `,arrayOne[arrayLength]) ;  // print
     arrayLength  = arrayLength -1                                    // arratLength = -1
 }
