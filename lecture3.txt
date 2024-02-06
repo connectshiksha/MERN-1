@@ -1,0 +1,15 @@
+// problem Statement 2  
+
+// You are developing a language processing application, and one of the tasks involves counting the number of vowels in a given sentence. Your goal is to create a function that takes a sentence as input and returns the count of vowels (a, e, i, o, u).
+
+// Requirements:
+
+// Create a function named countVowels that takes a sentence as a parameter.
+// Inside the function, initialize a counter variable to keep track of the number of vowels.
+// Iterate through each character in the sentence and check if it is a vowel (case-insensitive).
+// Increment the counter for each vowel found.
+// Display the count of vowels in the sentence.
+
+//  Example 
+// countVowels('JavaScript is fun!');
+// // Outputs: The sentence has 5 vowels.
