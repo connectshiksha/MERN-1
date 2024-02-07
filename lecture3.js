@@ -86,7 +86,7 @@ function countVowels (str){
 
     for(let i=0 ;i<str.length;i++){
         if(vowels.includes(str[i])){
-            counter = counter +1
+            counter = counter + 1
         }
     }
     return counter
