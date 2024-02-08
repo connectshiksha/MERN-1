@@ -70,3 +70,17 @@ url = "https://api.publicapis.org/entries"
 fetch(url).then((data)=>  data.json() ).then((data)=>{
     console.log("api data",data);
 })
+
+
+// setTimeout(()=>{
+//     clearInterval(myTimer) 
+//     console.log("Timer Stop ")
+// },5000)
+
+// let time = 0
+
+
+// let myTimer =  setInterval(()=>{
+//     time = time +1 
+//     console.log("time is",time)
+// },1000)
