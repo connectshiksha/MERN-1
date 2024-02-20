@@ -27,7 +27,7 @@
 // // Example usage:
 // const nums = [1, 1, 3, 4, 1, 1];
 
-// console.log(stepCheckofArray(nums)); 
+// console.log(stepCheckofArray(nums));
 
 let url = "https://api.publicapis.org/entries" ;
 

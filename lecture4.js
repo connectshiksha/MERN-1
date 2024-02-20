@@ -64,12 +64,12 @@
 
 // rapidapi.com
 
-url = "https://api.publicapis.org/entries"
+// url = "https://api.publicapis.org/entries"
 
 
-fetch(url).then((data)=>  data.json() ).then((data)=>{
-    console.log("api data",data);
-})
+// fetch(url).then((data)=>  data.json() ).then((data)=>{
+//     console.log("api data",data);
+// })
 
 
 // setTimeout(()=>{
@@ -84,3 +84,42 @@ fetch(url).then((data)=>  data.json() ).then((data)=>{
 //     time = time +1 
 //     console.log("time is",time)
 // },1000)
+
+// const http = require('https');
+
+// const url = "https://api.publicapis.org/entries";
+
+// http.get(url, (response) => {
+//   let data = '';
+
+//   response.on('data', (chunk) => {
+//     data += chunk;
+//   });
+
+//   response.on('end', () => {
+//     console.log("api data", JSON.parse(data));
+//   });
+// }).on('error', (error) => {
+//   console.error("Error fetching data:", error);
+// });
+
+
+
+const https = require('https');
+
+https.globalAgent.options.rejectUnauthorized = false;
+
+const url = "https://api.publicapis.org/entries";
+
+fetch(url)
+  .then(response => {
+  
+    return response.json();
+  })
+  .then(data => {
+    console.log("api data", data);
+  })
+  .catch(error => {
+    console.error('Error fetching data:', error);
+  });
+
