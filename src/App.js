@@ -1,12 +1,13 @@
 
 import Info from './components/info'
-import AboutUs from './components/AboutUs'
+// import AboutUs from './components/AboutUs'
 const App = () => {
 
   return (
     <>
       <Info />
-      <AboutUs/>
+      {/* <AboutUs/> */}
+      
     </>
   )
 }
