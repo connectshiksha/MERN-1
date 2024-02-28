@@ -1,0 +1,6 @@
+
+
+// hooks in react 
+
+1. useState hook
+2. useEffect hook 
