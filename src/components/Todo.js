@@ -30,7 +30,7 @@ const Todo = () => {
                                     <div key={index}>
 
                                         Item  : {item}
-                                        <button style={{marginLeft:"10px"}} > Delete Item</button>
+                                        <button style={{marginLeft:"10px"}} > Delete Item</button> 
                                     </div>
 
                                 </>
