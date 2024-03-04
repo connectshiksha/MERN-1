@@ -1,9 +1,13 @@
 
-// import Info from './components/info'
-// import AboutUs from './components/AboutUs'
+import Info from './components/info'
+import AboutUs from './components/AboutUs'
 // import Counter  from './components/counter'
 import Todo from "./components/Todo"
-import Form from "./components/Form"
+import Form2 from "./components/Form"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+
 const App = () => {
 
   return (
@@ -12,8 +16,18 @@ const App = () => {
       {/* <Info /> */}
       {/* <AboutUs/> */}
       {/* <Counter/> */}
-      {/* <Form /> */}
-      <Todo />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Info />} />
+          <Route path='/form' element={<Form2/>} />
+          <Route path='/about' element={<AboutUs/>} />
+
+
+          <Route path='*' element={ <>
+          <h1> Link Not Found </h1>
+          </>} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }

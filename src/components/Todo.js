@@ -1,4 +1,6 @@
 import { useState } from "react"
+import { Button, ListGroup, Card, InputGroup, Form } from 'react-bootstrap';
+
 
 
 const Todo = () => {
@@ -8,35 +10,51 @@ const Todo = () => {
     console.log("itemstate", itemState)
 
     const handleAddItem = () => {
-        setTodoList([...todoList, itemState])
+        if (itemState) {
+
+            setTodoList([...todoList, itemState])
+            setItemState("")
+        }
     }
-    console.log("todolist", todoList)
+    // console.log("todolist", todoList)
+    const handleDelete = (index) => {
+        const existingList = [...todoList]
+        existingList.splice(index, 1);
+        setTodoList(existingList);
+
+    }
     return (
         <>
             <div>
                 <h1 style={{ textAlign: "center" }} > Todo Application </h1>
                 <div >
                     <label> Add Task Here </label>
-                    <input type="text" onChange={(e) => setItemState(e.target.value)} />
-                    <button onClick={() => handleAddItem()} > Add Todo</button>
+                    <InputGroup style={{ width: '30rem' }}>
+                        <Form.Control type="text" onChange={(e) => setItemState(e.target.value)} value={itemState} />
+                        <button onClick={() => handleAddItem()} > Add Todo</button>
+                    </InputGroup>
                 </div>
 
                 <div>
-                    <h1> List of Todo's </h1>
-                    {
-                        todoList.map((item, index) => {
-                            return (
-                                <>
-                                    <div key={index}>
+                    <Card style={{ width: '30rem' }}>
+                        <Card.Title> List of Todo's </Card.Title>
 
-                                        Item  : {item}
-                                        <button style={{marginLeft:"10px"}} > Delete Item</button> 
-                                    </div>
+                        {
+                            todoList.map((item, index) => {
+                                return (
+                                    <>
+                                        <ListGroup key={index} style={{ margin: "1rem" }}>
+                                            <ListGroup.Item>
+                                                Item  : {item}
+                                                <Button variant="danger" style={{ marginLeft: "10px" }} onClick={() => handleDelete(index)} > Delete Item</Button>
+                                            </ListGroup.Item>
+                                        </ListGroup >
 
-                                </>
-                            )
-                        })
-                    }
+                                    </>
+                                )
+                            })
+                        }
+                    </Card>
                 </div>
 
 
