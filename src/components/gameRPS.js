@@ -21,8 +21,9 @@ const RPSGame = () => {
     // generating random input from computer
     
     const generateComputerInput=()=>{
+        // generating random number 
      const randomInput =  Math.floor(Math.random() * (3)) + 0;
-      return  allInput[randomInput] ;
+      return  allInput[randomInput] ;  //2
     
     }
 
@@ -30,7 +31,7 @@ const RPSGame = () => {
        let comInput = generateComputerInput() ;
 
        // you need to build logic according to game rule 
-       if(comInput ==="scissor" && userInput ==="stone" ) {
+       if( userInput ==="stone" && comInput ==="scissor"   ) {
           setResult("You Won !")
        }else {
         setResult("You Lost !!! ")
