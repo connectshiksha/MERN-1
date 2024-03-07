@@ -24,7 +24,8 @@ const Info = () => {
             <div>
                 <Button style={{ margin: "1rem" }} onClick={() => handleFormClick()} > Form  </Button>
                 {/* <Button onClick={()=> handleAboutUsClick()} > About Us   </Button> */}
-                <Link to="/about" >  About Us </Link>
+                {/* <Link to="/about" >  About Us </Link> */}
+                <a href='/about' > about </a>
             </div>
 
         </>
