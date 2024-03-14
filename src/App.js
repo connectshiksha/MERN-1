@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import RPSGame from './components/gameRPS';
 import ImageGallery from "./components/imageGallery"
+import Cal from './components/Calculator';
 
 const App = () => {
 
@@ -24,6 +25,7 @@ const App = () => {
           <Route path='/about' element={<AboutUs/>} />
           <Route path='/game1' element={<RPSGame/>} />
           <Route path='/images' element={<ImageGallery/>} />
+          <Route path='/calculator' element={<Cal/>} />
           <Route path='*' element={ <>
           <h1> Link Not Found </h1>
           </>} />
